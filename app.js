@@ -639,7 +639,11 @@ function moveUP(steps, arr) {
     let nextRow = [...document.querySelectorAll(`[data-row="${prevRow - r}"]`)];
     let nextCol = nextRow.filter(col => col.dataset.col == prevCol);
 
-    if (nextCol[0].children.length) {
+    if ((beingDragged.dataset.type.split('-')[0] == 'pawn')) {
+      if (nextCol[0].children.length) {
+        break;
+      }
+    } else if (nextCol[0].children.length) {
       if (
         nextCol[0].dataset.side !=
         beingDragged.dataset.type.split('-')[1] &&
@@ -719,10 +723,14 @@ function moveDown(steps, arr) {
     let nextRow = [...document.querySelectorAll(`[data-row="${prevRow + r}"]`)];
     let nextCol = nextRow.filter(col => col.dataset.col == prevCol)
 
-    if (nextCol[0].children.length) {
+    if ((beingDragged.dataset.type.split('-')[0] == 'pawn')) {
+      if (nextCol[0].children.length) {
+        break;
+      }
+    } else if (nextCol[0].children.length) {
       if (
         nextCol[0].dataset.side !=
-        beingDragged.dataset.type.split('-')[1] && 
+        beingDragged.dataset.type.split('-')[1] &&
         steps != 1
       ) {
         arr.push(nextCol[0]);
@@ -730,7 +738,6 @@ function moveDown(steps, arr) {
       }
       break;
     }
-
     arr.push(nextCol[0]);
   }
 
