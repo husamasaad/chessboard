@@ -1,6 +1,6 @@
-# Connect Four Game
+# Chess Board
 
-This is my 45 Project in the 50 project Challange to practice vanilla JavaScript, a Responsive Connect 4 Game for playing with 2nd player and soon will add Ai player
+This is my last Project in the 50 project Challange to practice vanilla JavaScript, a Responsive Chess Board for playing with 2nd player and soon will add Ai player
 
 ## Overview
 
@@ -8,10 +8,8 @@ This is my 45 Project in the 50 project Challange to practice vanilla JavaScript
 
 Users should be able to:
 
-- View the game rules
-- Play a game of Connect Four against another human player (alternating turns on the same computer)
+- Play a game of Chess against another human player (alternating turns on the same computer)
 - View the optimal layout for the interface depending on their device's screen size
-- See the discs animate into their position when a move is made
 
 ### Screenshot
 
@@ -19,7 +17,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Site URL](https://husamasaad.github.io/connect-four/)
+- [Live Site URL](https://husamasaad.github.io/chessboard/)
 
 ## My process
 
